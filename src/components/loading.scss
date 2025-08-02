@@ -1,0 +1,53 @@
+.card {
+  width: 100%;
+  border-radius: 4px;
+
+  .inner {
+    padding: 0.5rem;
+    background: #fff;
+    color: #222;
+    border-radius: 4px;
+  }
+}
+
+@keyframes move {
+  from {
+    left: 0%;
+    right: 100%
+  }
+
+  to {
+    left: 100%;
+    right: 0%;
+  }
+}
+
+.outer-2 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 4px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background: linear-gradient(90deg, rgb(251 132 132) 0%, rgb(250, 216, 3) 50%, rgb(253 114 114) 100%);
+    animation: move 2s linear forwards infinite;
+    width: 200px;
+    transform: translate(0);
+    position: absolute;
+    z-index: 0;
+    transform-origin: top center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

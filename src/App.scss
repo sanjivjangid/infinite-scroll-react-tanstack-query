@@ -1,0 +1,64 @@
+.app-container {
+  padding: 0.5rem;
+  background-color: #FFFACD;
+  background-image: radial-gradient(circle, #ababab 2px, transparent 2px);
+  background-size: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+.app-header {
+  padding: 1rem;
+  border: 2px solid #000;
+  border-radius: 1rem;
+  background-color: #fff;
+
+  h5 {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+
+  .list-wrapper {
+    border: 2px solid #000;
+    padding: 2rem;
+    background: #fff;
+
+    .list {
+      list-style: none;
+      max-height: 500px;
+      overflow: auto;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 0.5rem;
+        border-radius: 4px;
+        font-weight: 600;
+      }
+
+      li:nth-child(odd) {
+        background: #eee;
+      }
+
+      li.loading {
+        background: #fff;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.list-user span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
